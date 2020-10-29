@@ -1,0 +1,891 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+textarea {
+    resize: none;
+  }
+
+  
+#top{
+    text-decoration: none;
+    color:rgba(255, 255, 255,000);
+    padding:0.5em;
+    border-radius: 30%;
+    background-image: url(img/mobil/top.png);
+    background-repeat: no-repeat;
+ }
+ 
+
+/*footerrr*/
+  footer{
+      display:inline-block;
+      width: 100%;
+      height:64px;
+  }
+   
+.primer{
+    background-color: white;
+}
+
+  ul.navega li {
+    display: inline;
+    margin:1em;
+    text-decoration:none;
+    color:lightblue;
+    display: flex;
+    justify-content: right;
+  }
+
+  #fb{
+      background-image: url(facebook.png);
+      background-repeat: no-repeat;
+      padding: 0.3em;
+      text-decoration:none;
+      display: flex;
+      justify-content: center;
+      padding-left: 3em;
+  }
+
+
+  #tw{
+    background-image: url(twitter.png);
+    background-repeat: no-repeat;
+    padding-top: 0.7em;
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    margin-right: 1.5em;
+    padding-left: 3em;
+  }
+
+  #yt{
+    background-image: url(youtube.png);
+    background-repeat: no-repeat;
+    padding: 0.3em;
+    text-decoration:none;
+    justify-content: center;
+    display: flex;
+    padding-left: 3em;
+  }
+
+  details{
+      padding: 1em;
+      background-color: lightblue;
+  }
+
+
+/*---------------------------*/
+
+p{
+    margin:1em;
+    padding: 1em;
+}
+
+/*ANOTACION CAMBIAR LOS TAMAÑOS EN LAS DIFERENTES PANTALLAS*/
+#titu{
+
+font-size: 0em;
+}
+
+.iztexto{
+    text-align: left;
+}
+
+h1{
+  position: absolute;
+  font-size: 1.8em;
+}
+
+h2{
+   text-align: center;
+   color:#0B2EA4;
+}
+
+
+
+h3{
+    text-align: center;
+    color:#435D77;
+  
+}
+
+h4{
+    text-align: center;
+   color: #1D3491;
+ 
+   padding: 1em;
+  
+ 
+}
+
+h5{
+    color: #1D3491;
+}
+
+#conexion{
+  text-align: center;
+
+   
+}
+
+img {
+    max-width: 100%;
+    display:block;
+    margin:auto;
+
+}
+
+strong{
+    color:#085BAF;
+}
+
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border:0;
+}
+
+#enviar{
+
+    width: 90px;
+    height:40px;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    color:black;
+    font-size:0.6em;
+    position: relative;
+    left:160px;
+    top: -50px;
+
+   
+
+}
+
+#contacto{
+  width:280px;
+  font-size:1.5em;
+  margin:1em;
+}
+
+#imgformulario{
+padding-right:88px;
+}
+/*SLIDERRRRRRRRRRRR*/
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider{
+ position: relative;
+ width:100%; 
+}
+
+ul.slider li {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s;
+    background-color: #56CAD8;
+    color: black;
+    border-radius: 10%;
+}
+
+ul.slider li:first-child {
+    opacity: 1; 
+}
+
+ul.slider li:target {
+    opacity: 1;
+}
+
+.botones{
+  text-align: center;
+  margin: 20px;
+}
+
+.botones li{
+    display: inline-block;
+    margin-top: 465px;
+}
+
+.botones li a{
+ 
+  color: white;
+  text-decoration: none;
+  background-color:blue;
+  padding: 0.5em;
+  border-radius: 100%;
+}
+
+p{
+    width: 100%;
+    padding-bottom:1em ;
+    text-align: center;
+    display:block;
+    margin:auto;
+    line-height: 1.5em;
+}
+
+img{
+  display:block;
+  margin:0 auto;
+  padding: 1em;
+  }
+
+h4{
+ text-align: center;
+ font-size: 1.3em;
+ 
+}
+
+.textop{
+    text-align:left;
+}
+
+span{
+    display:none;
+}
+
+/*----------------------------*/
+
+
+/*MENU MENUUUU*/
+header {
+    background-image: url(r.png);
+    background-repeat: no-repeat;    
+}
+
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #hamburguesa li:first-child {
+        list-style: none;
+        text-indent: -100px;
+        overflow: hidden;
+        margin-top: .75em;
+        width: 2.5em;
+    }
+
+    #hamburguesa li:first-child a {
+        background: url("menu.png") no-repeat center center;
+        background-size: cover;
+        display: block;
+        height: 2.5em;
+        background-color: rgba(0, 0, 250, .6);
+        
+     
+    }
+    #hamburguesa li:last-child {
+        display: none;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+      
+        z-index: 99;
+    }
+
+    #hamburguesa li:last-child a {
+        display: block;
+        height: 100vh;
+        text-indent: -100px;
+        overflow: hidden;
+        cursor: default;
+    }
+
+    nav:target #barra {
+        left: 0;
+    }
+
+    nav:target #hamburguesa li:first-child {
+        display: none;
+    }
+
+    nav:target #hamburguesa li:last-child {
+        display: block;
+    }
+
+
+#barra {
+    width: 80vw;
+    height: 45vh;
+    position: fixed;
+    top: 0;
+    border-radius: 8%;
+    left: -90vw;
+    background-color: rgba(20, 106, 177, 0.938);
+    transition: left .5s ease;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, .2) 5px 5px 15px;
+}
+
+#barra li {
+    list-style: none;
+    margin: 1em;
+    width: 90%;
+    display: inline-block;
+}
+
+#barra li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 2em;
+    color: #ffffff;
+    background-color: rgba(11, 23, 134, 0.4);
+    border-radius: 6px;  
+
+}
+
+input{
+    margin-top:1em;
+    border-radius: 20px;
+    padding:0.5em;
+}
+
+textarea{
+    margin-bottom:3em;
+    border-radius: 20px;
+    padding: 1em;
+}
+
+
+/*ESTILOS TABLET*/
+@media screen and (min-width:700px) and (max-width: 992px){
+
+
+    #titu{
+      
+        font-size: 0;
+        }
+
+    /*esto es la primera parte seria historia*/
+.con1{
+   float: left;
+   padding: 3em;
+}
+.derecha{
+   display: inline-block;
+   
+   width: 50%;
+   margin: 1.6em;
+}
+
+.con2{
+   float: right;
+    
+}
+.izquierda{
+   width: 50%;
+}
+
+.iztexto{
+    text-align: left;
+    margin: 1em;
+}
+
+/*ahora viene la parte del cerebro y los beneficios*/
+
+.cuno{
+    width: 40%;
+    float: left;
+}
+.cdos{
+    width: 40%;
+    float: left;
+}
+.ctres{
+    width: 40%;
+   float: right;
+   margin-right:20% ;
+    
+}
+
+.ccuatro{
+    width: 40%;
+   
+}
+.contenedoricon{
+
+   margin-left:5em;
+   text-align: center;
+}
+
+#conexion{
+    width: 50%;
+}
+
+h4{
+    margin-top:1em;
+}
+/*hasta aca los cuatro iconos */
+
+/*ahora las pastillas de informacion*/
+
+.slider{
+   padding: 2em;
+   background-color: white;
+   display: flex;
+  justify-content: center;
+    
+}
+
+
+.pastiuno p{
+  text-align: left;
+
+   
+}
+.pastidos p{
+    text-align: left;
+    float:left;
+}
+
+.pastitres p{
+    text-align: left;
+    float: left;
+}
+
+
+.botones{
+   display: none;
+}
+
+.contenedorpastillas{
+    width: 100%;
+    display: inline-block;
+   
+}
+ul.slider li {
+   position: static;
+    opacity:5.5;
+    transition:0;
+    background-color:white;
+    color: black;
+    border-radius: 0;
+}
+
+
+iframe{
+    width: 100%;
+    height:50vh;
+}
+
+#contacto{
+   
+    margin-left: 5em;
+    width: 550px;
+   
+}
+
+#imgformulario{
+    display: inline-block;
+    float: right;
+    margin-left:4em;
+  
+}
+
+textarea{
+    margin-bottom:3em;
+    border-radius: 20px;
+    padding: 2em;
+}
+input{
+    margin-top:2em;
+    border-radius: 20px;
+    padding-left:0.3em;
+    padding: 0.5em;
+    padding-left:0.1em;
+  
+}
+
+
+
+
+
+#enviar{
+
+        width: 90px;
+        height:40px;
+        background-color: lightskyblue;
+        border-radius: 10px;
+        color:black;
+        font-size:0.6em;
+        position: relative;
+        left:-100px;
+        top: -5px;
+    
+   
+}
+.pas{
+    font-size: 1.1em;
+   
+}
+.navega {
+    background: lightblue;
+    display: flex;
+    justify-content: center;  
+ 
+}
+
+
+#fb{
+    padding-left:3em;
+    text-decoration:none;
+    color:lightblue;
+}
+
+#tw{
+    padding-left:3em; 
+    text-decoration:none;
+    color:lightblue;
+}
+
+#yt{
+    padding-left:3em; 
+    text-decoration:none;
+    color:lightblue;
+}
+
+#top{
+    position: relative;
+    left:500px;
+    top: -300px;
+ }
+
+ #flota{
+     
+     margin-right: 4em;
+     margin-top:6em;
+ }
+
+
+}
+
+
+
+/* Estilos para pc. */
+
+@media screen and (min-width: 900px) {
+
+
+    #titu{
+    
+        
+        font-size: 0;
+        }
+
+
+
+    #hamburguesa {
+        display: none;
+    }
+    
+    #menu {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #barra {
+        position: static;
+        height: auto;
+        text-align: right;
+        background: none;
+        max-width: 1100px;
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    #barra li {
+        width: 130px;
+        margin: 0 1em;
+        text-align: center;
+    }
+
+
+    
+.primer{
+    
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+    
+}
+.derecha{
+    width: 40%;
+    padding: 2vw;
+}
+
+.segun{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.izquierda{
+   padding: 5vw;
+
+    width: 40%;
+    
+    
+}
+
+.iztexto{
+    text-align: left;
+  
+}
+
+
+
+
+.slider{
+    padding: 2em;
+    background-color: white;
+    display: flex;
+   justify-content: center;
+     
+ }
+ 
+ 
+ .pastiuno p{
+   text-align: left;
+ 
+    
+ }
+ .pastidos p{
+     text-align: left;
+     float:left;
+ }
+ 
+ .pastitres p{
+     text-align: left;
+     float: left;
+ }
+ 
+ 
+ .botones{
+    display: none;
+ }
+ 
+ .contenedorpastillas{
+     width: 100%;
+     display: inline-block;
+    
+ }
+ ul.slider li {
+    position: static;
+     opacity:5.5;
+     transition:0;
+     background-color:white;
+     color: black;
+     border-radius: 0;
+ }
+
+
+.cuno{
+
+    display: flex;
+    justify-content: center;
+}
+h3{ 
+    font-size: 1.5em;
+    margin-top: 3vw;
+    padding: 2.5em;
+    width: 30%;
+    margin-right:30vw;
+}
+
+.cdos{
+    display: flex;
+    justify-content: center;
+}
+.ctres{
+  
+    display: flex;
+    justify-content: center;
+}
+
+.ccuatro{ 
+    display: flex;
+    justify-content: center;
+}
+
+.i{
+margin-left: 25vw;
+}
+
+
+/*AHORA EL CHICO*/
+.chico{
+   
+    padding:3em;
+}
+#conexion{
+    width: 40%;
+    font-size: 1.3em;
+}
+h4{
+    font-size: 2em;
+}
+
+/*AHORA PASTILLAS DE INFORMACION*/
+
+
+
+.pas{
+    font-size: 1.1em;
+    width: 93%;
+}
+
+.tp{
+  
+    width: 300px;
+    padding: 2em;
+    margin:1em;
+    justify-content: center;
+}
+
+iframe{
+    width: 60%;
+    height: 60vh;
+    margin-left: 20vw;
+  
+}
+
+
+.navega {
+    background: lightblue;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+#fb{
+
+    text-decoration:none;
+    color:lightblue;
+}
+
+#tw{
+
+    text-decoration:none;
+    color:lightblue;
+}
+
+#yt{
+
+    text-decoration:none;
+    color:lightblue;
+}
+
+/*formulario*/
+
+#contacto{
+    display: flex;
+    width:1000px;
+    font-size:1.5em;
+    margin-left:16em;  
+   
+  }
+
+  #imgformulario{
+      display: inline-block;
+      padding-right:0px;
+  }
+
+  form{
+   width: 400px;
+   padding-top:0.5em;
+   margin-left: 1.3em;
+   margin-right: 2em;
+   height: 500px;
+  }
+
+  input{
+      margin:0.5em;
+      padding: 0.6em;
+      padding-left:4em;
+      border-radius: 10px;
+      color: white;
+  }
+
+  textarea{
+      margin-top:1em;
+      border-radius: 10px;
+      padding: 1em;
+      color: white;
+  }
+
+  h5{
+      width:40%;
+      margin-left: 2em;
+  }
+
+  #enviar{
+    width: 100px;
+    height:60px;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    color:black;
+    font-size:0.6em;
+    padding-left:1em ;
+   
+}
+
+  #enviar:hover{
+      background-color: rgba(18, 188, 194, 0.781);
+  }
+
+
+  input:hover{
+    background-color:rgba(0, 0, 250, 0.226);
+  }
+  textarea:hover{
+    background-color:rgba(0, 0, 250, 0.226);
+  }
+
+  span{
+      display:block;
+      font-size:15px;
+  }
+  #top{
+     position: relative;
+     left:300px;
+     top: -500px;
+  }
+  
+
+
+}
+
+/*aca va la primera parte*/
+
+
+
+
+ 
+
+
+
+
+
+
+
+

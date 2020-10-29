@@ -1,0 +1,155 @@
+/* Reseteamos margin y padding por defecto y trabajamos con el nuevo modelo de caja css en todas las etiquetas. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Como vamos a trabajar con la técnica MOBILE FIRST incluimos primero las reglas pensadas para celular FUERA DE TODA CONSULTA DE MEDIO.
+ Esto hace que se apliquen siempre (en todos los medios más grandes) por no incluirse en ninguna query. De esta forma en las consultas
+  de tablet y pc no tenemos que volver a incluir reglas o propiedades que ya tenemos aplicadas desde celular 
+  (que no cambian y, por lo tanto, no las tendremos repetidas en cada consulta, por lo que el CSS se aplica más óptimamente) 
+  y que nos siguen sirviendo en esos medios.
+
+Como estas reglas son pensadas para celular no vamos a usar px, ni flotaciones, ni posicionamiento fijo. */
+
+header {
+    /* Ajustamos el ancho al 100% de pantalla del celular, le damos color de fondo y texto, 
+    alineamos al centro el logo o título de la h1 ya que en celular es común encontrarlo allí ya
+     que podemos tener botones en el header (como el de menú hamburguesa) y ajustamos los paddings. */
+    
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2em 1.5em;
+}
+
+section {
+    /* Lo mismo para la section, acá ocupa todo el ancho pero ya preparamos el margin auto para cuando no sea el 100% del ancho. */
+    
+    width: 100%;
+}
+
+article {
+    /* En el mismo sentido ajustamos a los articles display inline-block,
+     en celular ocupan todo el ancho por lo que no se van a poner en línea, pero lo vamos a necesitar en tablet y pc. */
+    
+    padding: 1em;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+article p {
+    margin: 1em 0;
+}
+
+/* Aplicamos un color de fondo a cada article para identificarlos bien. */
+
+#uno {
+    background-color: tomato;
+}
+
+#dos {
+    background-color: khaki;
+}
+
+#tres {
+    background-color: aqua;
+}
+
+footer {
+    /* Igual que al header y la section, aplicamos el margin auto en el footer
+     pensando en tablet y pc cuando no ocupe el 100% del ancho del dispositivo como en celular. */
+    
+    width: 100%;
+    background: #eee;
+    text-align: center;
+    padding: 2em 1.5em;
+}
+
+/* La técnica Mobile First nos propone CONSTRUIR desde la versión más pequeña en vez de destruir 
+desde la más grande (pc). Por lo tanto, se recomienda solo utilizar min-width en las consultas
+ en vez de max-width (siempre que sea posible, tampoco es que esté prohibido, pero si se aplica bien,
+  generalmente no hará falta el uso del max-width) ya que el concepto es "como mínimo..." o 
+  "desde este ancho hacia arriba" que es lo que propone la técnica. 
+
+Por lo tanto el break point queda resuelto solo por el tamaño desde donde se
+ aplican todas las propiedades de celular libres de consulta y se empiezan
+  a aplicar las reglas de la primera consulta. La idea es pisar solo las 
+  propiedades que cambien de valor en cada medio. Acá planteamos medida tablet desde 577px en adelante. */
+
+@media screen and (min-width: 577px) {
+    
+    /* Tanto para el header como para la section y el footer nos sirven 
+    todas las propiedades que les aplicamos en celular menos el ancho ya que,
+     en este ejemplo, no vamos a querer que ocupen el 100% de la tablet, por
+      lo que solo pisamos el valor de esa propiedad y le damos margin auto para
+       centrar las cajas que ahora tienen un ancho menor que el viewport, esta
+        propiedad la aplicamos en tablet pero se sigue aplicando en pc 
+        (ya que la query da positiva) por lo que se reutiliza en pantallas grandes. */
+    
+    header, section, footer {
+        width: 95%;
+        margin: auto;
+    }
+    
+    /* Del mismo modo para los dos primeros artículos que 
+    los vamos a querer en línea (cambiamos la maqueta en tablet).
+     Para eso aplicamos el display inline-block en celular 
+     (ahora con menos ancho se ubican en línea estos articles) 
+     y también unimos el cierre de cada article y la apertura del 
+     siguiente en el html mediante un comentario 
+     (esto genera que no se agregue el espacio que, por default, le agrega a los elementos en línea el browser)
+      ya que, si ocupan el 50% cada uno ese espacio superaría el 100% del ancho del dispositivo
+       y haría que el article dos salte de línea. */
+    
+    #uno, #dos {
+        width: 50%;
+    }
+}
+
+/* Por último, incluimos la query para pc con el mismo concepto de
+ "desde 990px en adelante" con el min-width. 
+ Cabe aclarar que en éste tamaño se están aplicando tanto
+  las reglas sueltas de celular, como las de tablet 
+  (ya que también da positiva la consulta) como las que
+   pisemos desde esta query (esto hace que algo que apliquemos 
+   para tablet pueda también servirnos en pc, como el margin auto 
+   para el header, section y footer). En pc, podemos utilizar píxeles
+    en los anchos de las cajas para evitar que en pantallas muy grandes el diseño crezca mucho. */
+
+@media screen and (min-width: 990px) {
+    
+    /* Tanto al header como a la section y el footer les aplicamos 
+    el ancho en px pero con la propiedad max-width ya que esta query 
+    se empieza a aplicar en un ancho de 990px y la caja tendría 1024px 
+    por lo que generaría scroll horizontal, de este modo lo evitamos.
+     Pero max-width no pisa a la propiedad width que se viene aplicando 
+     de tablet, por lo que se le ajustará un ancho del 95% cuando no 
+     lleguen al máximo de 1024px, para evitarlo (si así lo queremos, por supuesto), 
+     pisamos también la propiedad width para que ocupe el 100% del ancho del viewport 
+     mientras ese ancho sea menor a 1024px que limita el max-width. También alineamos
+      el texto de la h1 a la izquierda ya que vamos a querer al logo o título ppal en ese sector en pc. */
+    
+    header, section, footer {
+        max-width: 1024px;
+        width: 100%;
+    }
+    
+    h1 {
+        text-align: left;
+    }
+    
+    /* Por último, aplicamos un ancho equitativo a los
+     tres articles para tenerlos todos en línea y presentar
+      otra maqueta distinta y optimizada para este tamaño de dispositivo. */
+    
+    #uno, #dos, #tres {
+        width: 33.33%;
+    }
+}
+
+/* Como vemos, la técnica Mobile First produce que el CSS esté más optimizado, escribimos menos cantidad de código ya que solo se incluyen las propiedades que cambien de valor en cada medio superior y nos permite tener mucho menos peso en las hojas de estilos que utilizamos (esto mejora mucho la performance de la técnica @media y pueda ser utilizada en sitios más extensos donde antes se desancosejaba por cachearse siempre todas las reglas en todos los medios, especialmente pensando en el celular, ya que ahora las reglas que se utilizan en los que no se aplican son mucho menos cantidad). */
